@@ -255,7 +255,7 @@ ul											{margin:0}
   	-khtml-opacity:1;
 }
 .navbar-custom  ul									{margin:0;}
-.navbar-brand-home	img								{width:75px; height:auto}
+.navbar-brand-home	img								{width:175px; height:auto}
 .subpage .navbar-brand	img							{width:60px; height:auto; margin-top:-.4em;}
 .navbar-fixed-top .navbar-collapse					{max-height:450px!important;}
 .navbar-collapse									{padding:0;}
