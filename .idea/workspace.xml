@@ -42,8 +42,8 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/act v1.3/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.82137835" vertical-offset="3796" max-vertical-offset="12735">
-              <caret line="292" column="229" selection-start-line="292" selection-start-column="229" selection-end-line="292" selection-end-column="229" />
+            <state vertical-scroll-proportion="0.5260197" vertical-offset="3781" max-vertical-offset="12735">
+              <caret line="277" column="72" selection-start-line="277" selection-start-column="72" selection-end-line="277" selection-end-column="72" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -401,7 +401,7 @@
       <changelist id="2c0d2070-e267-42fb-b972-92d228bb08ce" name="Default" comment="" />
       <created>1414154199058</created>
       <updated>1414154199058</updated>
-      <workItem from="1414154201843" duration="7607000" />
+      <workItem from="1414154201843" duration="7822000" />
     </task>
     <task id="LOCAL-00001" summary="first layout changes">
       <created>1414157058019</created>
@@ -439,11 +439,15 @@
       <created>1414161820912</created>
       <updated>1414161820912</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="formatting the search">
+      <created>1414161907691</created>
+      <updated>1414161907691</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7607000" />
+    <option name="totallyTimeSpent" value="7822000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="32" width="1400" height="845" extended-state="0" />
@@ -489,6 +493,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
@@ -554,8 +560,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/act v1.3/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82137835" vertical-offset="3796" max-vertical-offset="12735">
-          <caret line="292" column="229" selection-start-line="292" selection-start-column="229" selection-end-line="292" selection-end-column="229" />
+        <state vertical-scroll-proportion="0.5260197" vertical-offset="3781" max-vertical-offset="12735">
+          <caret line="277" column="72" selection-start-line="277" selection-start-column="72" selection-end-line="277" selection-end-column="72" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
