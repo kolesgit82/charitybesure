@@ -29,8 +29,8 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/act v1.3/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70464134" vertical-offset="3714" max-vertical-offset="13020">
-              <caret line="281" column="32" selection-start-line="281" selection-start-column="32" selection-end-line="281" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.35724333" vertical-offset="2491" max-vertical-offset="13020">
+              <caret line="183" column="67" selection-start-line="183" selection-start-column="67" selection-end-line="183" selection-end-column="67" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -437,7 +437,7 @@
       <changelist id="2c0d2070-e267-42fb-b972-92d228bb08ce" name="Default" comment="" />
       <created>1414154199058</created>
       <updated>1414154199058</updated>
-      <workItem from="1414154201843" duration="4593000" />
+      <workItem from="1414154201843" duration="5087000" />
     </task>
     <task id="LOCAL-00001" summary="first layout changes">
       <created>1414157058019</created>
@@ -451,11 +451,15 @@
       <created>1414157805782</created>
       <updated>1414157805782</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="improvments to the search menu">
+      <created>1414158894031</created>
+      <updated>1414158894031</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4593000" />
+    <option name="totallyTimeSpent" value="5087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="32" width="1400" height="845" extended-state="0" />
@@ -542,8 +546,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/act v1.3/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70464134" vertical-offset="3714" max-vertical-offset="13020">
-          <caret line="281" column="32" selection-start-line="281" selection-start-column="32" selection-end-line="281" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.35724333" vertical-offset="2491" max-vertical-offset="13020">
+          <caret line="183" column="67" selection-start-line="183" selection-start-column="67" selection-end-line="183" selection-end-column="67" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
