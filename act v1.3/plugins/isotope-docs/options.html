@@ -1,0 +1,784 @@
+<!doctype html>
+<!--[if lte IE 8]>     <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="description" content="filter &amp; sort magical layouts" />
+
+  <title>Isotope &middot; Options</title>
+
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700" />
+
+  
+    <!-- DEV MODE - including each .css file -->
+    
+      <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+    
+      <link rel="stylesheet" href="css/base.css" />
+    
+      <link rel="stylesheet" href="css/code.css" />
+    
+      <link rel="stylesheet" href="css/demos.css" />
+    
+      <link rel="stylesheet" href="css/footer.css" />
+    
+      <link rel="stylesheet" href="css/hero.css" />
+    
+      <link rel="stylesheet" href="css/icons.css" />
+    
+      <link rel="stylesheet" href="css/index.css" />
+    
+      <link rel="stylesheet" href="css/layout.css" />
+    
+      <link rel="stylesheet" href="css/modules.css" />
+    
+      <link rel="stylesheet" href="css/site-nav.css" />
+    
+  
+
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@metafizzyco" />
+  <meta name="twitter:url" content="http://isotope.metafizzy.co/options.html" />
+  <meta name="twitter:title" content="Isotope Options" />
+  <meta name="twitter:description" content="filter &amp; sort magical layouts" />
+
+</head>
+<body class="options-page" data-page="options">
+
+  <div id="nav">
+    <h1><a href=".">Isotope</a></h1>
+    <ol id="site-nav">
+      <li class="nav-filtering"><a href="filtering.html">Filtering</a></li>
+      <li class="nav-sorting"><a href="sorting.html">Sorting</a></li>
+      <li class="nav-layout-modes sub-nav">
+        <a href="layout-modes.html">Layout modes</a>
+        <ul>
+          <li class="nav-masonry"><a href="layout-modes/masonry.html">masonry</a></li>
+          <li class="nav-fitrows"><a href="layout-modes/fitrows.html">fitRows</a></li>
+          <li class="nav-cellsbyrow"><a href="layout-modes/cellsbyrow.html">cellsByRow</a></li>
+          <li class="nav-vertical"><a href="layout-modes/vertical.html">vertical</a></li>
+          <li class="nav-packery"><a href="layout-modes/packery.html">packery</a></li>
+          <li class="nav-masonryhorizontal"><a href="layout-modes/masonryhorizontal.html">masonryHorizontal</a></li>
+          <li class="nav-fitcolumns"><a href="layout-modes/fitcolumns.html">fitColumns</a></li>
+          <li class="nav-cellsbycolumn"><a href="layout-modes/cellsbycolumn.html">cellsByColumn</a></li>
+          <li class="nav-horizontal"><a href="layout-modes/horizontal.html">horizontal</a></li>
+        </ul>
+      </li>
+      <li class="nav-options"><a href="options.html">Options</a></li>
+      <li class="nav-methods"><a href="methods.html">Methods</a></li>
+      <li class="nav-events"><a href="events.html">Events</a></li>
+      <li class="nav-license"><a href="license.html">License</a></li>
+      <li class="nav-appendix"><a href="appendix.html">Appendix</a></li>
+      <li class="nav-faq"><a href="faq.html">FAQ</a></li>
+    </ol>
+
+      
+      
+        <ul id="page-nav">
+          
+            <li><a href="#containerstyle">containerStyle</a></li>
+          
+            <li><a href="#filter">filter</a></li>
+          
+            <li><a href="#getsortdata">getSortData</a></li>
+          
+            <li><a href="#hiddenstyle">hiddenStyle</a></li>
+          
+            <li><a href="#layoutmode">layoutMode</a></li>
+          
+            <li><a href="#isinitlayout">isInitLayout</a></li>
+          
+            <li><a href="#isoriginleft">isOriginLeft</a></li>
+          
+            <li><a href="#isorigintop">isOriginTop</a></li>
+          
+            <li><a href="#isresizebound">isResizeBound</a></li>
+          
+            <li><a href="#itemselector">itemSelector</a></li>
+          
+            <li><a href="#sortascending">sortAscending</a></li>
+          
+            <li><a href="#sortby">sortBy</a></li>
+          
+            <li><a href="#stamp">stamp</a></li>
+          
+            <li><a href="#transitionduration">transitionDuration</a></li>
+          
+            <li><a href="#visiblestyle">visibleStyle</a></li>
+          
+            <li><a href="#element-sizing">Element sizing</a></li>
+          
+        </ul>
+      
+
+  </div>
+
+  
+  
+
+  <div id="content">
+
+    <div class="primary-content">
+      
+        <h1>Options</h1>
+        
+    </div>
+
+    
+    
+<div class="primary-content">
+
+<p>All options are optional, but <a href="#itemselector"><code>itemSelector</code></a> is recommended. <a href="layout-modes.html#layout-mode-options">Layout modes have their own separate options</a>.</p>
+
+<pre><code class="js"><span class="comment">// with jQuery</span>
+$(<span class="string">'#container'</span>).isotope({
+  itemSelector: <span class="string">'.item'</span>,
+  getSortData: {
+    name: <span class="string">'.name'</span>,
+    category: <span class="string">'[data-category]'</span>
+  },
+  <span class="comment">// layout mode options</span>
+  masonry: {
+    columnWidth: <span class="number">200</span>
+  }
+});</code></pre>
+
+<pre><code class="js"><span class="comment">// with vanilla JS</span>
+<span class="keyword">var</span> iso = <span class="keyword">new</span> Isotope( <span class="string">'#container'</span>, {
+  itemSelector: <span class="string">'.item'</span>,
+  getSortData: {
+    name: <span class="string">'.name'</span>,
+    category: <span class="string">'[data-category]'</span>
+  },
+  masonry: {
+    columnWidth: <span class="number">200</span>
+  }
+});
+</code></pre>
+
+<pre><code class="html"><span class="comment">&lt;!-- in HTML --&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"container"</span> <span class="attribute">class</span>=<span class="value">"js-isotope"</span> <span class="attribute">data-isotope-options</span>=<span class="value">'{ "itemSelector": ".item", "getSortData": { "name": ".name", "cateogry": "[data-category]" }, "masonry": { "columnWidth": 200 } }'</span>&gt;</span></code></pre>
+
+
+</div><div class="primary-content">
+
+<h2 id="containerstyle">containerStyle</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>Object</i></span>
+  </p>
+  <p class="param-bit default">
+    <b>Default:</b>
+    <span class="value"><code>{ position: <span class="string">'relative'</span> }</code></span>
+  </p>
+</div>
+
+<p>CSS styles that are applied to the container element. To disable Masonry from setting any CSS to the container element, set <code>containerStyle: <span class="literal">null</span></code>.</p>
+
+</div><div class="primary-content">
+
+<h2 id="filter">filter</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>String</i> or <i>Function</i></span>
+  </p>
+</div>
+
+<p>Shows items that match the filter and hides items that do not match. See <a href="filtering.html">docs on Filtering</a>.</p>
+
+<p>If set to a string, that value is used as a <a href="filtering.html#selectors">selector</a>.</p>
+
+<pre><code class="js">$container.isotope({ filter: <span class="string">'.selector'</span> });</code></pre>
+
+
+<p>If <a href="filtering.html#functions"><code>filter</code> is set to a function</a>, that function checks each item and returns <code>true</code> or <code>false</code> if the item should be shown or hidden.</p>
+
+<pre><code class="js">$container.isotope({
+  <span class="comment">// filter element with numbers greater than 50</span>
+  filter: <span class="keyword">function</span>() {
+    <span class="comment">// `this` is the item element. Get text of element's .number</span>
+    <span class="keyword">var</span> number = $(<span class="keyword">this</span>).find(<span class="string">'.number'</span>).text();
+    <span class="comment">// return true to show, false to hide</span>
+    <span class="keyword">return</span> parseInt( number, <span class="number">10</span> ) &gt; <span class="number">50</span>;
+  }
+});</code></pre>
+
+
+</div><div class="primary-content">
+
+<h2 id="getsortdata">getSortData</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>Object</i></span>
+  </p>
+</div>
+
+<p>Isotope reads data from markup with the <code>getSortData</code> option. See <a href="sorting.html#getsortdata">complete docs on <code>getSortData</code></a>.</p>
+
+<p><code>getSortData</code> accepts an object. The object&rsquo;s keys are keywords used to <a href="#sortby"><code>sortBy</code></a>. Object values are either a shortcut string or function to retrieve the data.</p>
+
+<pre><code class="js"><span class="keyword">var</span> $container = $(<span class="string">'#container'</span>).isotope({
+  getSortData: {
+    name: <span class="string">'.name'</span>, <span class="comment">// text from querySelector</span>
+    category: <span class="string">'[data-category]'</span>, <span class="comment">// value of attribute</span>
+    weight: <span class="keyword">function</span>( itemElem ) { <span class="comment">// function</span>
+      <span class="keyword">var</span> weight = $( itemElem ).find(<span class="string">'.weight'</span>).text();
+      <span class="keyword">return</span> parseFloat( weight.replace( <span class="regexp">/[\(\)]/g</span>, <span class="string">''</span>) );
+    }
+  }
+});</code></pre>
+
+
+</div><div class="primary-content">
+
+<h2 id="hiddenstyle">hiddenStyle</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>Object</i></span>
+  </p>
+  <p class="param-bit default">
+    <b>Default:</b>
+    <span class="value"><code>{ opacity: <span class="literal">0</span>, transform: <span class="string">'scale(0.001)'</span> }</code></span>
+  </p>
+</div>
+
+<p>The style applied to hide items.</p>
+
+<pre><code class="js">$(<span class="string">'#container'</span>).isotope({
+  <span class="comment">// disable scale transform transition when hiding</span>
+  hiddenStyle: {
+    opacity: <span class="number">0</span>
+  },
+  visibleStyle: {
+    opacity: <span class="number">1</span>
+  }
+})</code></pre>
+
+
+</div><div class="primary-content">
+
+<h2 id="isinitlayout">isInitLayout</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>Boolean</i></span>
+  </p>
+  <p class="param-bit default">
+    <b>Default:</b>
+    <span class="value"><code><span class="literal">true</span></code></span>
+  </p>
+</div>
+
+<p>Enables layout on initialization. Set this to <code><span class="literal">false</span></code> to disable layout on initialization, so you can use <a href="methods.html">methods</a> or add <a href="events.html">events</a> before the initial layout.</p>
+
+<pre><code class="js"><span class="keyword">var</span> $container = $(<span class="string">'#container'</span>).isotope({
+  <span class="comment">// disables initial layout</span>
+  isInitLayout: <span class="literal">false</span>
+});
+<span class="comment">// bind event</span>
+$container.isotope( <span class="string">'on'</span>, <span class="string">'layoutComplete'</span>, <span class="keyword">function</span>() {
+  console.log(<span class="string">'layout is complete'</span>);
+});
+<span class="comment">// manually trigger initial layout</span>
+$container.arrange();</code></pre>
+
+
+</div><div class="primary-content">
+
+<h2 id="isoriginleft">isOriginLeft</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>Boolean</i></span>
+  </p>
+  <p class="param-bit default">
+    <b>Default:</b>
+    <span class="value"><code><span class="literal">true</span></code></span>
+  </p>
+</div>
+
+<p>Controls the horizontal flow of the layout. By default, item elements start positioning at the left. Set to <code><span class="literal">false</span></code> for right-to-left layouts.</p>
+
+<div class="row example">
+  <div class="cell example-code">
+<pre><code class="js">isOriginLeft: <span class="literal">false</span></code></pre>
+
+  </div>
+  <div class="cell demo">
+    <div class="isotope js-isotope counting" data-isotope-options='{ "isOriginLeft": false }'>
+      <div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item w2 h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+
+    </div>
+    <p class="edit"><a href="http://codepen.io/desandro/pen/gadFJ">Edit this example on CodePen</a></p>
+  </div>
+</div>
+
+</div><div class="primary-content">
+
+<h2 id="isorigintop">isOriginTop</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>Boolean</i></span>
+  </p>
+  <p class="param-bit default">
+    <b>Default:</b>
+    <span class="value"><code><span class="literal">true</span></code></span>
+  </p>
+</div>
+
+<p>Controls the vertical flow of the layout. By default, item elements start positioning at the top. Set to <code><span class="literal">false</span></code> for bottom-up layouts. It&rsquo;s like Tetris!</p>
+
+<div class="row example">
+  <div class="cell example-code">
+<pre><code class="js">isOriginTop: <span class="literal">false</span></code></pre>
+
+  </div>
+  <div class="cell demo">
+    <div class="isotope js-isotope counting" data-isotope-options='{ "isOriginTop": false }'>
+      <div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item w2 h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+
+    </div>
+    <p class="edit"><a href="http://codepen.io/desandro/pen/kxFJH">Edit this example on CodePen</a></p>
+  </div>
+</div>
+
+</div><div class="primary-content">
+
+<h2 id="isresizebound">isResizeBound</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>Boolean</i></span>
+  </p>
+  <p class="param-bit default">
+    <b>Default:</b>
+    <span class="value"><code><span class="literal">true</span></code></span>
+  </p>
+</div>
+
+<p>Binds layout to window resizing.</p>
+
+<p><code>isResizeBound</code> binds layout only when the Masonry instance is first initialized. You can bind and unbind resize layout afterwards with the <a href="methods.html#bindresize"><code>bindResize</code></a> and <a href="methods.html#unbindresize"><code>unbindResize</code></a> methods.</p>
+
+</div><div class="primary-content">
+
+<h2 id="itemselector">itemSelector</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value">Selector <i>String</i></span>
+  </p>
+</div>
+
+<p>Specifies which child elements to be used as item elements. Setting <code>itemSelector</code> is always recommended. <code>itemSelector</code> is useful to exclude <a href="#element-sizing">sizing elements</a>.</p>
+
+<pre><code class="js">itemSelector: <span class="string">'.item'</span></code></pre>
+
+
+</div><div class="primary-content">
+
+<h2 id="layoutmode">layoutMode</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>String</i></span>
+  </p>
+  <p class="param-bit default">
+    <b>Default:</b>
+    <span class="value"><code><span class="string">'masonry'</span></code></span>
+  </p>
+</div>
+
+<p>Sets the layout mode used to position items. See <a href="layout-modes.html">docs on layout modes</a>.</p>
+
+</div><div class="primary-content">
+
+<h2 id="sortascending">sortAscending</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>Boolean</i> or <i>Object</i></span>
+  </p>
+  <p class="param-bit default">
+    <b>Default:</b>
+    <span class="value"><code><span class="literal">true</span></code></span>
+  </p>
+</div>
+
+<p>Sorts items ascending if <code><span class="literal">true</span></code> &ldquo;A, B, C&hellip;&rdquo;, &ldquo;1, 2, 3&hellip;&rdquo;, or descending if <code><span class="literal">false</span></code>, &ldquo;Z, Y, X&hellip;&rdquo;, &ldquo;9, 8, 7&hellip;&rdquo;.</p>
+
+<pre><code class="js"><span class="comment">// sort by number, highest number first</span>
+$container.isotope({
+  sortBy: <span class="string">'number'</span>,
+  sortAscending: <span class="literal">false</span>
+});</code></pre>
+
+
+<p><code>sortAscending</code> can also accept an object, so that you can set ascending order for each <code>sortBy</code> value.</p>
+
+<pre><code class="js">  sortAscending: {
+    name: <span class="literal">true</span>,
+    weight: <span class="literal">false</span>,
+    category: <span class="literal">true</span>,
+    number: <span class="literal">false</span>
+  }</code></pre>
+
+
+</div><div class="primary-content">
+
+<h2 id="sortby">sortBy</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>String</i> or <i>Array</i></span>
+  </p>
+</div>
+
+<p>Specify which property of <code>getSortData</code> to sort items by. The value of <code>sortBy</code> needs to match a property name in <code>getSortData</code>.</p>
+
+<pre><code class="js">container.isotope({
+  getSortData: {
+    number: <span class="string">'.number parseInt'</span>
+  },
+  sortBy : <span class="string">'number'</span>
+});</code></pre>
+
+
+<p>Two additional <code>sortBy</code> options are built in.</p>
+
+<ul>
+  <li><code><span class="string">'original-order'</span></code> will use the original order of the item elements to arrange them in the layout.</li>
+  <li><code><span class="string">'random'</span></code> is a random order.</li>
+</ul>
+
+<p>To sort by multiple properties, you can set <code>sortBy</code> to an array of property names. For example, <code>sortBy: [ 'color', 'number' ]</code> will sort items by color, <em>then</em> by number.</p>
+
+</div><div class="primary-content">
+
+<h2 id="stamp">stamp</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>Element</i>, <i>NodeList</i>, <i>Array</i> of Elements, or Selector <i>String</i></span>
+  </p>
+</div>
+
+<p>Specifies which elements are <a href="methods.html#stamp">stamped</a> within the layout. These are special layout elements which will not be laid out. Rather, Isotope will layout item elements <em>below</em> stamped elements.</p>
+
+<p>Only <a href="layout-modes/masonry.html">masonry</a>, <a href="layout-modes/packery.html">packery</a>, and <a href="layout-modes/masonryhorizontal.html">masonryHorizontal</a> layout modes support stamping.</p>
+
+<p>The <code>stamp</code> option stamps elements only when the Isotope instance is first initialized. You can stamp additional elements afterwards with the <a href="methods.html#stamp"><code>stamp</code> method</a>.</p>
+
+<div class="row example">
+  <div class="cell example-code">
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"stamp-opt-demo"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"stamp stamp1"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"stamp stamp2"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"item"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"item"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  ....
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+<pre><code class="js">itemSelector: <span class="string">'.mini-item'</span>,
+stamp: <span class="string">'.stamp'</span></code></pre>
+
+<pre><code class="css"><span class="comment">/* position stamp elements with CSS */</span>
+<span class="id">#stamp-opt-demo</span> <span class="rules">{
+  <span class="rule"><span class="attribute">position</span>:<span class="value"> relative;</span></span>
+<span class="rule">}</span></span>
+<span class="id">#stamp-opt-demo</span> <span class="class">.stamp</span> <span class="rules">{
+  <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute;</span></span>
+  <span class="rule"><span class="attribute">background</span>:<span class="value"> orange;</span></span>
+  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">4</span>px dotted black;</span></span>
+<span class="rule">}</span></span>
+<span class="id">#stamp-opt-demo</span> <span class="class">.stamp1</span> <span class="rules">{
+  <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">30</span>%;</span></span>
+  <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">10</span>px;</span></span>
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">20</span>%;</span></span>
+  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100</span>px;</span></span>
+<span class="rule">}</span></span>
+<span class="id">#stamp-opt-demo</span> <span class="class">.stamp2</span> <span class="rules">{
+  <span class="rule"><span class="attribute">right</span>:<span class="value"> <span class="number">10</span>%;</span></span>
+  <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">20</span>px;</span></span>
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">70</span>%;</span></span>
+  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">30</span>px;</span></span>
+<span class="rule">}</span></span></code></pre>
+
+  </div>
+  <div class="cell demo">
+    <div id="stamp-opt-demo" class="isotope has-stamp js-isotope" data-isotope-options='{ "itemSelector": ".mini-item", "stamp": ".stamp" }'>
+      <div class="stamp stamp1"></div>
+      <div class="stamp stamp2"></div>
+      <div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item w2 h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+
+    </div>
+    <p class="edit"><a href="http://codepen.io/desandro/pen/jfhnx">Edit this example on CodePen</a></p>
+  </div>
+</div>
+
+</div><div class="primary-content">
+
+<h2 id="transitionduration">transitionDuration</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>String</i></span>
+  </p>
+  <p class="param-bit default">
+    <b>Default:</b>
+    <span class="value"><code><span class="string">'0.4s'</span></code></span>
+  </p>
+</div>
+
+<p>Duration of the transition when items change position or appearance, set in a CSS time format.</p>
+
+<p>To disable all transitions, set <code>transitionDuration: <span class="literal">0</span></code>.</p>
+
+</div><div class="primary-content">
+
+<h2 id="visiblestyle">visibleStyle</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>Object</i></span>
+  </p>
+  <p class="param-bit default">
+    <b>Default:</b>
+    <span class="value"><code>{ opacity: <span class="literal">1</span>, transform: <span class="string">'scale(1)'</span> }</code></span>
+  </p>
+</div>
+
+<p>The style applied to reveal hidden items.</p>
+
+<pre><code class="js">$(<span class="string">'#container'</span>).isotope({
+  <span class="comment">// disable scale transform transition when hiding</span>
+  hiddenStyle: {
+    opacity: <span class="number">0</span>
+  },
+  visibleStyle: {
+    opacity: <span class="number">1</span>
+  }
+})</code></pre>
+
+
+</div><div class="primary-content">
+
+<h2 id="element-sizing">Element sizing</h2>
+
+<p>For the sizing options, like <a href="layout-modes/masonry.html#columnwidth"><code>masonry: columnWidth</code></a> and <a href="layout-modes/masonry.html#gutter"><code>masonry: gutter</code></a>, you may set these options to an <i>Element</i> or <i>String</i>, in addition to a <i>Number</i>.</p>
+
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"container"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid-sizer"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"item"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"item"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+
+<p>With a <i>String</i>, Isotope will use the string as a selector to get the first matching element within the container element. The size of that element is then used.</p>
+
+<pre><code class="js"><span class="keyword">var</span> $container = $(<span class="string">'#container'</span>).isotope({
+  itemSelector: <span class="string">'.item'</span>,
+  masonry: {
+    columnWidth: <span class="string">'.grid-sizer'</span>
+  }
+});</code></pre>
+
+
+<div class="warning">
+  <p>If you are using element sizing, be sure to set <a href="#itemselector"><code>itemSelector</code></a> as well, so the sizing element does not get used in the layout.</p>
+</div>
+
+<p>With an <i>Element</i>, Isotope will use its outer width to set the value of the related property.</p>
+
+<pre><code class="js">  masonry: {
+    columnWidth: $container.find(<span class="string">'.grid-sizer'</span>)[<span class="number">0</span>]
+  }</code></pre>
+
+
+<p>This allows you to control the size of the Isotope layout just with your CSS. This is useful for responsive layouts, keeping control within CSS so you can rely on media queries.</p>
+
+<pre><code class="css"><span class="comment">/* 5 columns by default */</span>
+<span class="class">.grid-sizer</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">20</span>%;</span></span> <span class="rule">}</span></span>
+
+<span class="at_rule">@<span class="keyword">media</span> screen and (min-width: <span class="number">720</span>px) </span>{
+  <span class="comment">/* 10 columns for larger screens */</span>
+  <span class="class">.grid-sizer</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">10</span>%;</span></span> <span class="rule">}</span></span>
+}</code></pre>
+
+
+
+
+</div>
+
+
+  </div>
+
+  <div id="footer">
+    <div class="footer-content">
+      
+      <a class="metafizzy-logo" href="http://metafizzy.co">M<span class="etafizzy">etafizzy</span></a>
+      <span class="copyright">&copy; 2011&ndash;2014</span>
+    </div>
+  </div>
+
+<!-- Isotope does NOT require jQuery. But it does make things easier -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="bower_components/jquery/jquery.min.js"><\/script>')</script>
+
+
+  <!-- DEV MODE - including each .js file -->
+  
+    <script src="bower_components/classie/classie.js"></script>
+  
+    <script src="bower_components/eventie/eventie.js"></script>
+  
+    <script src="bower_components/doc-ready/doc-ready.js"></script>
+  
+    <script src="bower_components/get-style-property/get-style-property.js"></script>
+  
+    <script src="bower_components/get-size/get-size.js"></script>
+  
+    <script src="bower_components/eventEmitter/EventEmitter.js"></script>
+  
+    <script src="bower_components/imagesloaded/imagesloaded.js"></script>
+  
+    <script src="bower_components/jquery-bridget/jquery.bridget.js"></script>
+  
+    <script src="bower_components/matches-selector/matches-selector.js"></script>
+  
+    <script src="bower_components/outlayer/item.js"></script>
+  
+    <script src="bower_components/outlayer/outlayer.js"></script>
+  
+    <script src="bower_components/masonry/masonry.js"></script>
+  
+    <script src="bower_components/isotope/js/item.js"></script>
+  
+    <script src="bower_components/isotope/js/layout-mode.js"></script>
+  
+    <script src="bower_components/isotope/js/isotope.js"></script>
+  
+    <script src="bower_components/isotope/js/layout-modes/vertical.js"></script>
+  
+    <script src="bower_components/isotope/js/layout-modes/fit-rows.js"></script>
+  
+    <script src="bower_components/isotope/js/layout-modes/masonry.js"></script>
+  
+    <script src="bower_components/isotope-cells-by-column/cells-by-column.js"></script>
+  
+    <script src="bower_components/isotope-cells-by-row/cells-by-row.js"></script>
+  
+    <script src="bower_components/isotope-fit-columns/fit-columns.js"></script>
+  
+    <script src="bower_components/isotope-horizontal/horizontal.js"></script>
+  
+    <script src="bower_components/isotope-masonry-horizontal/masonry-horizontal.js"></script>
+  
+    <script src="bower_components/packery/js/rect.js"></script>
+  
+    <script src="bower_components/packery/js/packer.js"></script>
+  
+    <script src="bower_components/packery/js/item.js"></script>
+  
+    <script src="bower_components/packery/js/packery.js"></script>
+  
+    <script src="bower_components/isotope-packery/packery-mode.js"></script>
+  
+    <script src="js/vendor/highlight.pack.js"></script>
+  
+    <script src="js/controller.js"></script>
+  
+    <script src="js/pages/appendix.js"></script>
+  
+    <script src="js/pages/events.js"></script>
+  
+    <script src="js/pages/filtering.js"></script>
+  
+    <script src="js/pages/index.js"></script>
+  
+    <script src="js/pages/layout-modes.js"></script>
+  
+    <script src="js/pages/methods.js"></script>
+  
+    <script src="js/pages/sorting.js"></script>
+  
+    <script src="js/pages/vertical.js"></script>
+  
+
+
+
+
+</body>
+</html>

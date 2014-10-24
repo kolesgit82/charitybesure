@@ -1,0 +1,294 @@
+<!doctype html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Act - Non-Profit Theme Built with Bootstrap 3</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Theme CSS-->
+    <link href="css/one-page-base.css" rel="stylesheet">
+    <link href="css/act.css" rel="stylesheet">   
+    <!-- Plugins & Assets-->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/hover-effects.css" /> 
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Adaptive-Images JS // this has to go here -->
+    <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script>
+    <!-- 'Addthis' share widget -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=co31"></script>
+
+	</head>
+	<body id="page-top" data-spy="scroll" data-target=".navbar">
+    
+    <!-- preloader -->
+    <div id="preloader-wrapper">
+        <div class="preloader">
+              &nbsp;
+        </div>
+    </div><!-- / preloader -->
+        
+    		
+    <!--=== NAVBAR ===-->
+        <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse subpage" role="navigation">
+                <div class="navbar-header">
+                    <ul class="list-unstyled list-inline pull-right">
+                        <li>
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                                <i class="fa fa-bars"></i>
+                            </button>     
+                        </li>
+                        <li id="donate-button-responsive" class="donate bg-brand-tertiary">
+                             <a  href="#donatemodal" data-toggle="modal" role="button" class="navbar-toggle">Donate</a>     
+                    	</li>     
+                    </ul>         
+                    <a id="logo" class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="logo"></a>
+                </div>
+    
+                <!-- Responsive toggle nav -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a href="index.html#about">About</a>
+                        </li>
+                        <li>
+                            <a href="index.html#events">Events</a>
+                        </li>
+                        <li>
+                            <a href="index.html#volunteer">Spotlight</a>
+                        </li>
+                        <li>
+                            <a href="index.html#gallery">Projects</a>
+                        </li>
+                        <li>
+                            <a href="index.html#join">Take Action</a>
+                        </li>
+                        <li>
+                            <a href="index.html#contact">Contact</a>
+                        </li>
+                        <li>
+                            <a href="donors.html">Donors</a>
+                        </li>
+                        <li class="active-subpage">
+                            <a href="blog-home.html">Blog</a>
+                        </li>
+                    </ul>
+                  <div id="donate-button-subpages" class="donate bg-brand-tertiary pull-right">
+                        <a href="#donatemodal"  data-toggle="modal" role="button">Donate</a>
+                    </div>
+                </div><!-- /navbar-collapse -->
+         </nav><!-- /navbar -->
+        
+        <!--=== DONATE modal ===-->
+          <div class="modal fade" id="donatemodal">
+            <div class="modal-dialog modal-lg text-center">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h1 class="modal-title">Donate Now </h1>
+                    <h2>Join us in helping people survive and rebuild their lives. </h2>
+                  </div>
+                  <div class="modal-body">
+                  	<ul class="list-unstyled list-inline">
+                  		<li><button type="button" class="btn btn-primary btn-xl btn-block">$15</button></li>
+                        <li><button type="button" class="btn btn-primary btn-xl btn-block">$25</button></li>
+                        <li><button type="button" class="btn btn-primary btn-xl btn-block">$50</button></li>
+                        <li><button type="button" class="btn btn-primary btn-xl btn-block">$75</button></li>
+                        <li><button type="button" class="btn btn-primary btn-xl btn-block">$100</button></li>
+                        <li>
+                       	    <div class="control-group">
+                              <div class="form-control-donate controls">
+                                <input name="textinput" placeholder="$ Other Amount" class="form-control" type="text">
+                              </div>
+                            </div>
+                        </li>
+					</ul>
+                    <br>
+                    <!-- monthly / one-time -->
+                          <form class="form-horizontal text-center">
+                            <fieldset>
+                            <div class="form-group">
+                              <div class="col-md-12"> 
+                                <label class="radio-inline" for="radios-0">
+                                  <input name="radios" id="radios-0" value="1" checked="checked" type="radio">
+                                  Single Donation
+                                </label> 
+                                <label class="radio-inline" for="radios-1">
+                                  <input name="radios" id="radios-1" value="2" type="radio">
+                                  Monthly Donation
+                                </label> 
+                              </div>
+                          </div>
+                          </fieldset>
+                        </form>
+                    <br>
+                    <button type="button" class="btn btn-tertiary btn-xl" data-dismiss="modal">Continue</button> 
+                    <br><br>                     
+                </div>
+              </div><!-- / modal-content -->
+            </div><!-- / modal-dialog -->
+          </div><!--=== / END donate modal ===-->
+<style>		
+	.blog-masonry-container {padding:100px 50px;margin:auto auto; text-align:center!important; float:none!important;}
+
+.portfolioFilter a {
+    margin-right: 10px;
+    color:#666;
+    text-decoration:none;
+}
+ 
+.portfolioFilter a.current {
+    font-weight:bold;
+}
+ 
+img {
+    margin:5px;
+}
+ 
+.isotope-item {
+    z-index: 2;
+}
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+ 
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+}
+            </style>
+     	<!--=== BLOG HOME ===-->
+     	<section id="blog" class="subpage bg-white"> 
+              <!-- blog entries isotope masonry style -->
+              <div id="blog-masonry" class="blog-masonry-container">
+                        <div class="objects">
+                            <img src="img/carousel-tn-children-01.png" alt="image">
+                        </div>
+                     
+                        <div class="people places">
+                            <img src="img/carousel-tn-children-01.png" alt="image">
+                        </div>   
+                     
+                        <div class="food">
+                            <img src="img/carousel-tn-children-01.png" alt="image">
+                        </div>
+                         
+                        <div class="people places">
+                            <img src="img/carousel-tn-children-01.png" alt="image">
+                        </div>
+                     
+                        <div class="places objects">
+                            <img src="img/carousel-tn-children-01.png" alt="image">
+                        </div>
+                     
+                        <div class="people food objects">
+                            <img src="img/carousel-tn-children-01.png" alt="image">
+                        </div>
+                     
+                        <div class="food objects">
+                            <img src="img/carousel-tn-children-01.png" alt="image">
+                        </div>   
+                         
+                        <div class="food">
+                            <img src="img/carousel-tn-children-01.png" alt="image">
+                        </div> 
+              </div><!-- / end blog entries --><!-- / end .container -->
+		</section><!--=== END blog ===-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Core JavaScript Files -->
+		<script src="js/jquery-1.11.0.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="dist/js/bootstrap.min.js"></script>
+        <!-- Plugins -->
+		<script src="js/modernizr.js"></script>
+        <script src="js/jquery.easing.min.js"></script>	
+		<script src="plugins/WOW-master/dist/wow.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        
+		
+		<script src="js/isotope.pkgd.min.js"></script>
+        <!-- Custom JavaScript -->
+        <script src="js/act-subpages.js"></script>
+
+
+<script>$(window).load(function(){
+    var $container = $('#blog-masonry');
+    $container.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
+ 
+    $('.portfolioFilter a').click(function(){
+        $('.portfolioFilter .current').removeClass('current');
+        $(this).addClass('current');
+ 
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+         });
+         return false;
+    });
+});</script>
+
+
+
+  
+
+
+
+</body>
+</html>

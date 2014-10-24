@@ -1,0 +1,601 @@
+<!doctype html>
+<!--[if lte IE 8]>     <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="description" content="filter &amp; sort magical layouts" />
+
+  <title>Isotope &middot; packery</title>
+
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700" />
+
+  
+    <!-- DEV MODE - including each .css file -->
+    
+      <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+    
+      <link rel="stylesheet" href="../css/base.css" />
+    
+      <link rel="stylesheet" href="../css/code.css" />
+    
+      <link rel="stylesheet" href="../css/demos.css" />
+    
+      <link rel="stylesheet" href="../css/footer.css" />
+    
+      <link rel="stylesheet" href="../css/hero.css" />
+    
+      <link rel="stylesheet" href="../css/icons.css" />
+    
+      <link rel="stylesheet" href="../css/index.css" />
+    
+      <link rel="stylesheet" href="../css/layout.css" />
+    
+      <link rel="stylesheet" href="../css/modules.css" />
+    
+      <link rel="stylesheet" href="../css/site-nav.css" />
+    
+  
+
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@metafizzyco" />
+  <meta name="twitter:url" content="http://isotope.metafizzy.co/packery.html" />
+  <meta name="twitter:title" content="Isotope packery" />
+  <meta name="twitter:description" content="filter &amp; sort magical layouts" />
+
+</head>
+<body class="packery-page" data-page="packery">
+
+  <div id="nav">
+    <h1><a href="../.">Isotope</a></h1>
+    <ol id="site-nav">
+      <li class="nav-filtering"><a href="../filtering.html">Filtering</a></li>
+      <li class="nav-sorting"><a href="../sorting.html">Sorting</a></li>
+      <li class="nav-layout-modes sub-nav">
+        <a href="../layout-modes.html">Layout modes</a>
+        <ul>
+          <li class="nav-masonry"><a href="../layout-modes/masonry.html">masonry</a></li>
+          <li class="nav-fitrows"><a href="../layout-modes/fitrows.html">fitRows</a></li>
+          <li class="nav-cellsbyrow"><a href="../layout-modes/cellsbyrow.html">cellsByRow</a></li>
+          <li class="nav-vertical"><a href="../layout-modes/vertical.html">vertical</a></li>
+          <li class="nav-packery"><a href="../layout-modes/packery.html">packery</a></li>
+          <li class="nav-masonryhorizontal"><a href="../layout-modes/masonryhorizontal.html">masonryHorizontal</a></li>
+          <li class="nav-fitcolumns"><a href="../layout-modes/fitcolumns.html">fitColumns</a></li>
+          <li class="nav-cellsbycolumn"><a href="../layout-modes/cellsbycolumn.html">cellsByColumn</a></li>
+          <li class="nav-horizontal"><a href="../layout-modes/horizontal.html">horizontal</a></li>
+        </ul>
+      </li>
+      <li class="nav-options"><a href="../options.html">Options</a></li>
+      <li class="nav-methods"><a href="../methods.html">Methods</a></li>
+      <li class="nav-events"><a href="../events.html">Events</a></li>
+      <li class="nav-license"><a href="../license.html">License</a></li>
+      <li class="nav-appendix"><a href="../appendix.html">Appendix</a></li>
+      <li class="nav-faq"><a href="../faq.html">FAQ</a></li>
+    </ol>
+
+      
+      
+        <ul id="page-nav">
+          
+            <li><a href="#install">Install</a></li>
+          
+            <li><a href="#stamp">Stamp</a></li>
+          
+            <li><a href="#columnwidth">columnWidth</a></li>
+          
+            <li><a href="#gutter">gutter</a></li>
+          
+            <li><a href="#ishorizontal">isHorizontal</a></li>
+          
+            <li><a href="#rowheight">rowHeight</a></li>
+          
+        </ul>
+      
+
+  </div>
+
+  
+  
+
+  <div id="content">
+
+    <div class="primary-content">
+      
+        <h1>packery</h1>
+        
+    </div>
+
+    
+    
+<div class="primary-content">
+
+<p>The packery layout mode uses a bin-packing algorithm. This is a fancy way of saying “it fills empty gaps.”</p>
+
+<p><a href="http://packery.metafizzy.co">Packery</a> is available as a stand-alone layout library. See also: <a href="../faq.html#difference-between-isotope-masonry-and-packery">What is the difference between Isotope, Masonry, and Packery?</a></p>
+
+<div class="demo">
+  <div class="isotope js-isotope is-varying-sizes rainbowed" data-isotope-options='{ "layoutMode": "packery" }'>
+    <div class="element-item width2"><p class="symbol">1</p></div>
+<div class="element-item height2"><p class="symbol">2</p></div>
+<div class="element-item"><p class="symbol">3</p></div>
+<div class="element-item"><p class="symbol">4</p></div>
+<div class="element-item width2 height2"><p class="symbol">5</p></div>
+<div class="element-item width2"><p class="symbol">6</p></div>
+<div class="element-item height2"><p class="symbol">7</p></div>
+<div class="element-item"><p class="symbol">8</p></div>
+<div class="element-item"><p class="symbol">9</p></div>
+<div class="element-item width2"><p class="symbol">10</p></div>
+<div class="element-item"><p class="symbol">11</p></div>
+<div class="element-item"><p class="symbol">12</p></div>
+
+  </div>
+  <p class="edit"><a href="http://codepen.io/desandro/pen/vdwmb">Edit this example on CodePen</a></p>
+</div>
+
+</div><div class="primary-content">
+
+<h2 id="install">Install</h2>
+
+<p>This layout mode is not included in <a href="../isotope.pkgd.js">isotope.pkgd.js</a> and must be installed separately.</p>
+
+<p>Download a packaged source file for packery layout mode:</p>
+
+<ul>
+  <li><a href="https://raw.githubusercontent.com/metafizzy/isotope-packery/master/packery-mode.pkgd.js">packery-mode.pkgd.js</a></li>
+  <li><a href="https://raw.githubusercontent.com/metafizzy/isotope-packery/master/packery-mode.pkgd.min.js">packery-mode.pkgd.min.js</a></li>
+</ul>
+
+
+<p>Or, install with Bower:</p>
+
+<pre><code>bower install metafizzy/isotope-packery</code></pre>
+
+
+</div><div class="primary-content">
+
+<h2 id="stamp">Stamp</h2>
+
+<p>Packery layout can <a href="../options.html#stamp">stamp</a> items in place. Packery will layout item elements <em>around</em> stamped elements &mdash; even above, unlike Masonry.</p>
+
+<div class="row example">
+  <div class="cell example-code">
+<pre><code class="js">layoutMode: <span class="string">'packery'</span>,
+itemSelector: <span class="string">'.mini-item'</span>,
+stamp: <span class="string">'.stamp'</span></code></pre>
+
+  </div>
+  <div class="cell demo">
+    <div id="packery-stamp-opt-demo" class="isotope has-stamp js-isotope" data-isotope-options='{ "layoutMode": "packery", "itemSelector": ".mini-item", "stamp": ".stamp" }'>
+      <div class="stamp stamp1"></div>
+      <div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item w2 h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+
+    </div>
+    <p class="edit"><a href="http://codepen.io/desandro/pen/Ccnmi">Edit this example on CodePen</a></p>
+  </div>
+</div>
+
+</div><div class="primary-content">
+
+<h1>Options</h1>
+
+</div><div class="primary-content">
+
+<h2 id="columnwidth">columnWidth</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>Number</i>, <i>Element</i>, or Selector <i>String</i></span>
+  </p>
+</div>
+
+<p>Aligns items to the width of a column of a horizontal grid.</p>
+
+<p>Unlike <a href="masonry.html">masonry layout</a>, packery layout does not require <code>columnWidth</code>.</p>
+
+<div class="row example">
+  <div class="cell example-code">
+<pre><code class="js">layoutMode: <span class="string">'packery'</span>,
+packery: {
+  columnWidth: <span class="number">60</span>
+}</code></pre>
+
+  </div>
+  <div class="cell demo">
+    <div class="isotope js-isotope" data-isotope-options='{ "layoutMode": "packery", "packery": { "columnWidth": 60 } }'>
+      <div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item w2 h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+
+    </div>
+    <p class="edit"><a href="http://codepen.io/desandro/pen/EoBqg">Edit this example on CodePen</a></p>
+  </div>
+</div>
+
+<p>If set to an <i>Element</i> or Selector <i>String</i>, Isotope will use the width of that element. See <a href="../options.html#element-sizing">Element sizing</a>. Setting <code>columnWidth</code> with element sizing is recommended if you are using percentage widths.</p>
+
+<div class="row example">
+  <div class="cell example-code">
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"flex-5-col"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid-sizer"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"mini-item"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"mini-item"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+<pre><code class="css"><span class="class">.flex-5-col</span> <span class="class">.grid-sizer</span>,
+<span class="class">.flex-5-col</span> <span class="class">.mini-item</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">20</span>%;</span></span> <span class="rule">}</span></span>
+<span class="class">.flex-5-col</span> <span class="class">.mini-item</span><span class="class">.w2</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">40</span>%;</span></span> <span class="rule">}</span></span></code></pre>
+
+<pre><code class="js">layoutMode: <span class="string">'packery'</span>,
+packery: {
+  columnWidth: <span class="string">'.grid-sizer'</span>
+},
+itemSelector: <span class="string">'.mini-item'</span></code></pre>
+
+  </div>
+  <div class="cell demo">
+    <div class="isotope js-isotope flex-5-col" data-isotope-options='{ "layoutMode": "packery", "packery": { "columnWidth": ".grid-sizer" }, "itemSelector": ".mini-item" }'>
+      <div class="grid-sizer"></div>
+      <div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item w2 h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+
+    </div>
+    <p class="edit"><a href="http://codepen.io/desandro/pen/DbciA">Edit this example on CodePen</a></p>
+  </div>
+</div>
+
+
+</div><div class="primary-content">
+  
+<h2 id="gutter">gutter</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>Number</i>, <i>Element</i>, or Selector <i>String</i></span>
+  </p>
+</div>
+
+<p>The space between item elements, both vertically and horizontally.</p>
+
+<div class="row example">
+  <div class="cell example-code">
+<pre><code class="js">packery: {
+  gutter: <span class="number">10</span>
+}</code></pre>
+
+<pre><code class="css"><span class="class">.packery-gutter</span> <span class="class">.mini-item</span><span class="class">.w2</span> <span class="rules">{
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">110</span>px;</span></span>
+<span class="rule">}</span></span>
+<span class="class">.packery-gutter</span> <span class="class">.mini-item</span><span class="class">.h2</span> <span class="rules">{
+  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">110</span>px;</span></span>
+<span class="rule">}</span></span></code></pre>
+
+  </div>
+  <div class="cell demo packery-gutter">
+    <div class="isotope js-isotope" data-isotope-options='{ "layoutMode": "packery", "packery": { "gutter": 10 } }'>
+      <div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item w2 h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+
+    </div>
+    <p class="edit"><a href="http://codepen.io/desandro/pen/LBCwy">Edit this example on CodePen</a></p>
+  </div>
+</div>
+
+<p>If set to an <i>Element</i> or Selector <i>String</i>, Isotope will use the width of that element. See <a href="../options.html#element-sizing">Element sizing</a>.</p>
+
+<div class="row example">
+  <div class="cell example-code">
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"flex-4-col-gutter"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid-sizer"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gutter-sizer"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"mini-item"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"mini-item"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+<pre><code class="css"><span class="class">.flex-4-col-gutter</span> <span class="class">.grid-sizer</span>,
+<span class="class">.flex-4-col-gutter</span> <span class="class">.mini-item</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">22</span>%;</span></span> <span class="rule">}</span></span>
+<span class="class">.flex-4-col-gutter</span> <span class="class">.mini-item</span><span class="class">.w2</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">48</span>%;</span></span> <span class="rule">}</span></span>
+<span class="class">.flex-4-col-gutter</span> <span class="class">.gutter-sizer</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">4</span>%;</span></span> <span class="rule">}</span></span></code></pre>
+
+<pre><code class="js">layoutMode: <span class="string">'packery'</span>,
+packery: {
+  gutter: <span class="string">'.gutter-sizer'</span>
+},
+itemSelector: <span class="string">'.mini-item'</span></code></pre>
+
+  </div>
+  <div class="cell demo">
+    <div class="isotope js-isotope flex-4-col-gutter" data-isotope-options='{ "layoutMode": "packery", "itemSelector": ".mini-item", "packery": { "gutter": ".gutter-sizer" } }'>
+      <div class="grid-sizer"></div>
+      <div class="gutter-sizer"></div>
+      <div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item w2 h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+
+    </div>
+    <p class="edit"><a href="http://codepen.io/desandro/pen/fGrKe">Edit this example on CodePen</a></p>
+  </div>
+</div>
+
+  
+</div><div class="primary-content">
+
+<h2 id="ishorizontal">isHorizontal</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>Boolean</i></span>
+  </p>
+  <p class="param-bit default">
+    <b>Default:</b>
+    <span class="value"><code><span class="literal">false</span></code></span>
+  </p>
+</div>
+
+<p>Arranges items horizontally instead of vertically.</p>
+
+<p>Set a <a href="../layout-modes.html#horizontal-layouts">container height</a> for horizontal layouts.</p>
+
+<div class="row example">
+  <div class="cell example-code">
+<pre><code class="js">layoutMode: <span class="string">'packery'</span>,
+packery: {
+  isHorizontal: <span class="literal">true</span>
+}</code></pre>
+
+  </div>
+  <div class="cell demo">
+    <div class="isotope js-isotope horizontal counting" data-isotope-options='{ "layoutMode": "packery", "packery": { "isHorizontal": true } }'>
+      <div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item w2 h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+
+    </div>
+    <p class="edit"><a href="http://codepen.io/desandro/pen/AmpsD">Edit this example on CodePen</a></p>
+  </div>
+</div>
+
+</div><div class="primary-content">
+
+<h2 id="rowheight">rowHeight</h2>
+
+<div class="param">
+  <p class="param-bit type">
+    <b>Type:</b>
+    <span class="value"><i>Number</i>, <i>Element</i>, or Selector <i>String</i></span>
+  </p>
+</div>
+
+<p>Aligns items to the height of a row of a vertical grid.</p>
+
+<div class="row example">
+  <div class="cell example-code">
+<pre><code class="js">layoutMode: <span class="string">'packery'</span>,
+packery: {
+  rowHeight: <span class="number">60</span>
+}</code></pre>
+
+  </div>
+  <div class="cell demo">
+    <div class="isotope js-isotope" data-isotope-options='{ "layoutMode": "packery", "packery": { "rowHeight": 60 } }'>
+      <div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item w2 h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item w2"></div>
+<div class="mini-item"></div>
+<div class="mini-item h2"></div>
+<div class="mini-item"></div>
+<div class="mini-item"></div>
+
+    </div>
+    <p class="edit"><a href="http://codepen.io/desandro/pen/jhgef">Edit this example on CodePen</a></p>
+  </div>
+</div>
+
+<p>If set to an <i>Element</i> or Selector <i>String</i>, Isotope will use the height of that element. See <a href="../options.html#element-sizing">Element sizing</a>. Setting <code>rowHeight</code> with element sizing is recommended if you are using media queries.</p>
+
+</div>
+
+
+  </div>
+
+  <div id="footer">
+    <div class="footer-content">
+      
+      <a class="metafizzy-logo" href="http://metafizzy.co">M<span class="etafizzy">etafizzy</span></a>
+      <span class="copyright">&copy; 2011&ndash;2014</span>
+    </div>
+  </div>
+
+<!-- Isotope does NOT require jQuery. But it does make things easier -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../bower_components/jquery/jquery.min.js"><\/script>')</script>
+
+
+  <!-- DEV MODE - including each .js file -->
+  
+    <script src="../bower_components/classie/classie.js"></script>
+  
+    <script src="../bower_components/eventie/eventie.js"></script>
+  
+    <script src="../bower_components/doc-ready/doc-ready.js"></script>
+  
+    <script src="../bower_components/get-style-property/get-style-property.js"></script>
+  
+    <script src="../bower_components/get-size/get-size.js"></script>
+  
+    <script src="../bower_components/eventEmitter/EventEmitter.js"></script>
+  
+    <script src="../bower_components/imagesloaded/imagesloaded.js"></script>
+  
+    <script src="../bower_components/jquery-bridget/jquery.bridget.js"></script>
+  
+    <script src="../bower_components/matches-selector/matches-selector.js"></script>
+  
+    <script src="../bower_components/outlayer/item.js"></script>
+  
+    <script src="../bower_components/outlayer/outlayer.js"></script>
+  
+    <script src="../bower_components/masonry/masonry.js"></script>
+  
+    <script src="../bower_components/isotope/js/item.js"></script>
+  
+    <script src="../bower_components/isotope/js/layout-mode.js"></script>
+  
+    <script src="../bower_components/isotope/js/isotope.js"></script>
+  
+    <script src="../bower_components/isotope/js/layout-modes/vertical.js"></script>
+  
+    <script src="../bower_components/isotope/js/layout-modes/fit-rows.js"></script>
+  
+    <script src="../bower_components/isotope/js/layout-modes/masonry.js"></script>
+  
+    <script src="../bower_components/isotope-cells-by-column/cells-by-column.js"></script>
+  
+    <script src="../bower_components/isotope-cells-by-row/cells-by-row.js"></script>
+  
+    <script src="../bower_components/isotope-fit-columns/fit-columns.js"></script>
+  
+    <script src="../bower_components/isotope-horizontal/horizontal.js"></script>
+  
+    <script src="../bower_components/isotope-masonry-horizontal/masonry-horizontal.js"></script>
+  
+    <script src="../bower_components/packery/js/rect.js"></script>
+  
+    <script src="../bower_components/packery/js/packer.js"></script>
+  
+    <script src="../bower_components/packery/js/item.js"></script>
+  
+    <script src="../bower_components/packery/js/packery.js"></script>
+  
+    <script src="../bower_components/isotope-packery/packery-mode.js"></script>
+  
+    <script src="../js/vendor/highlight.pack.js"></script>
+  
+    <script src="../js/controller.js"></script>
+  
+    <script src="../js/pages/appendix.js"></script>
+  
+    <script src="../js/pages/events.js"></script>
+  
+    <script src="../js/pages/filtering.js"></script>
+  
+    <script src="../js/pages/index.js"></script>
+  
+    <script src="../js/pages/layout-modes.js"></script>
+  
+    <script src="../js/pages/methods.js"></script>
+  
+    <script src="../js/pages/sorting.js"></script>
+  
+    <script src="../js/pages/vertical.js"></script>
+  
+
+
+
+
+</body>
+</html>

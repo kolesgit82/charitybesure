@@ -1,0 +1,151 @@
+<html>
+<head>
+  <title>jQuery countTo Example</title>
+  
+  <style type="text/css">
+    body {
+      font-family: Arial;
+      padding: 25px;
+    }
+    
+    .example {
+      position: relative;
+      padding: 25px;
+      margin: 25px 0;
+      line-height: 1em;
+      background-color: #eee;
+    }
+    
+    .example h2 {
+      margin-right: 100px;
+    }
+    
+    .example p {
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      font-size: 20px;
+    }
+    
+    .red {
+      color: #c00;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>jQuery countTo Example</h1>
+  <p>
+    This is a simple example of the
+    <a href="https://github.com/mhuggins/jquery-countTo">jQuery countTo plugin</a>
+    created by <a href="http://www.matthuggins.com">Matt Huggins</a>.  Refer to
+    the full documentation for more usage information.
+  </p>
+  
+  <div class="example">
+    <h2>
+      How many licks to the center of a Tootsie Pop?
+      <button class="restart" data-target="#lollipop">Restart</button>
+    </h2>
+    <p><b class="timer" id="lollipop" data-to="3" data-speed="1500"></b></p>
+  </div>
+  
+  <div class="example">
+    <h2>
+      What is Earth's radius?
+      <button class="restart" data-target="#earth">Restart</button>
+    </h2>
+    <p><b class="timer" id="earth" data-to="3968" data-speed="10000"></b> miles</p>
+  </div>
+  
+  <div class="example">
+    <h2>
+      Start the countdown...
+      <button class="restart" data-target="#countdown">Restart</button>
+    </h2>
+    <p>Lift-off in <b class="timer" id="countdown" data-from="3" data-to="1" data-speed="3000"></b></p>
+  </div>
+  
+  <div class="example">
+    <h2>
+      Earth's Gravity
+      <button class="restart" data-target="#gravity">Restart</button>
+    </h2>
+    <p><b class="timer" id="gravity" data-from="0" data-to="9.8" data-speed="3000" data-decimals="2"></b> m/s<sup>2</sup></p>
+  </div>
+  
+  <div class="example">
+    <h2>
+      To infinity...and beyond!
+      <button class="restart" data-target="#infinity">Restart</button>
+    </h2>
+    <p><b class="timer" id="infinity" data-from="0" data-to="1" data-speed="1000"></b></p>
+  </div>
+  
+        <!-- Core JavaScript Files -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>	
+	    <!-- Plugins -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&amp;sensor=false"></script>
+		<script src="js/modernizr.js"></script>
+        <script src="js/easing.min.js"></script>
+		<script src="plugins/WOW-master/dist/wow.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+		<script src="plugins/prettyPhoto_uncompressed_3.1.5/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" src="plugins/tinyscrollbar-master/lib/jquery.tinyscrollbar.js"></script>
+        <!-- these next three are for the date picker in the the 'schedule an event' modal window -->
+		<script type="text/javascript" src="js/moment.js"></script>
+		<script src="plugins/bootstrap-datetimepicker-master/src/js/locales/bootstrap-datetimepicker.en-au.js" type="text/javascript" charset="utf-8"></script>
+		<script src="plugins/bootstrap-datetimepicker-master/src/js/bootstrap-datetimepicker.js" type="text/javascript" charset="utf-8"></script>       
+        <!-- Custom JavaScript -->
+        <script src="js/act.js"></script>
+  <script type="text/javascript" src="jquery.countTo.js"></script>
+  
+  <script type="text/javascript">
+    jQuery(function ($) {
+      // custom formatting example
+      $('#earth').data('countToOptions', {
+        formatter: function (value, options) {
+          return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+        }
+      });
+      
+      // custom callback when counting completes
+      $('#countdown').data('countToOptions', {
+        onComplete: function (value) {
+          $(this).text('BLAST OFF!').addClass('red');
+        }
+      });
+      
+      // another custom callback for counting to infinity
+      $('#infinity').data('countToOptions', {
+        onComplete: function (value) {
+          count.call(this, {
+            from: value,
+            to: value + 1
+          });
+        }
+      });
+      
+      // start all the timers
+      $('.timer').each(count);
+      
+      // restart a timer when a button is clicked
+      $('.restart').click(function (event) {
+        event.preventDefault();
+        var target = $(this).data('target');
+        count.call($(target));
+      });
+      
+      function count(options) {
+        var $this = $(this);
+        options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+        $this.countTo(options);
+      }
+    });
+  </script>
+</body>
+</html>
