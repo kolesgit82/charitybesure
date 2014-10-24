@@ -29,19 +29,31 @@
       <file leaf-file-name="charity.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/act v1.3/charity.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3994374" vertical-offset="1636" max-vertical-offset="7695">
-              <caret line="128" column="30" selection-start-line="128" selection-start-column="30" selection-end-line="128" selection-end-column="30" />
-              <folding />
+            <state vertical-scroll-proportion="0.30379745" vertical-offset="2559" max-vertical-offset="8220">
+              <caret line="185" column="29" selection-start-line="185" selection-start-column="29" selection-end-line="185" selection-end-column="29" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sample-campaign.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/act v1.3/sample-campaign.html">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/act v1.3/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="7695">
-              <caret line="21" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="507" selection-end-column="7" />
-              <folding />
+            <state vertical-scroll-proportion="-24.958334" vertical-offset="4111" max-vertical-offset="13020">
+              <caret line="314" column="34" selection-start-line="286" selection-start-column="24" selection-end-line="314" selection-end-column="34" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,6 +73,7 @@
       <list>
         <option value="$PROJECT_DIR$/act v1.3/css/one-page-base.css" />
         <option value="$PROJECT_DIR$/act v1.3/index.html" />
+        <option value="$PROJECT_DIR$/act v1.3/sample-campaign.html" />
         <option value="$PROJECT_DIR$/act v1.3/charity.html" />
       </list>
     </option>
@@ -385,7 +398,7 @@
       <changelist id="2c0d2070-e267-42fb-b972-92d228bb08ce" name="Default" comment="" />
       <created>1414154199058</created>
       <updated>1414154199058</updated>
-      <workItem from="1414154201843" duration="5506000" />
+      <workItem from="1414154201843" duration="6145000" />
     </task>
     <task id="LOCAL-00001" summary="first layout changes">
       <created>1414157058019</created>
@@ -411,11 +424,15 @@
       <created>1414159697596</created>
       <updated>1414159697596</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="original charity">
+      <created>1414159808907</created>
+      <updated>1414159808907</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5506000" />
+    <option name="totallyTimeSpent" value="6145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="32" width="1400" height="845" extended-state="0" />
@@ -469,7 +486,8 @@
     <MESSAGE value="improvments to the search menu" />
     <MESSAGE value="fixing the header text alignment" />
     <MESSAGE value="ficing the logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="ficing the logo" />
+    <MESSAGE value="original charity" />
+    <option name="LAST_COMMIT_MESSAGE" value="original charity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -502,10 +520,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/act v1.3/sample-campaign.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37834036" vertical-offset="2461" max-vertical-offset="7695">
+          <caret line="182" column="66" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/act v1.3/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.66" vertical-offset="732" max-vertical-offset="13020">
-          <caret line="61" column="56" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
+        <state vertical-scroll-proportion="-24.958334" vertical-offset="4111" max-vertical-offset="13020">
+          <caret line="314" column="34" selection-start-line="286" selection-start-column="24" selection-end-line="314" selection-end-column="34" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -519,19 +545,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/act v1.3/sample-campaign.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="7695">
-          <caret line="21" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="507" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/act v1.3/charity.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3994374" vertical-offset="1636" max-vertical-offset="7695">
-          <caret line="128" column="30" selection-start-line="128" selection-start-column="30" selection-end-line="128" selection-end-column="30" />
-          <folding />
+        <state vertical-scroll-proportion="0.30379745" vertical-offset="2559" max-vertical-offset="8220">
+          <caret line="185" column="29" selection-start-line="185" selection-start-column="29" selection-end-line="185" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
